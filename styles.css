@@ -1,0 +1,192 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #792330;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+header h1 {
+    font-family: 'League Spartan', sans-serif;
+    margin: 0;
+    font-size: 2.5em;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+#div-initial-form {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+#div-initial-form h2,
+form h2 {
+    margin-top: 0;
+    font-family: 'League Spartan', sans-serif;
+}
+
+#div-initial-form label,
+form label {
+    display: block;
+    margin-top: 10px;
+}
+
+#div-initial-form input,
+form input,
+form select,
+form button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+#projects-container,
+#committees-container {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+#projects-container h2,
+#committees-container h2 {
+    text-align: center;
+    grid-column: span 3;
+}
+
+.project-card,
+.committee-card {
+    position: relative;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.image-container {
+    position: relative;
+}
+
+.project-card img,
+.committee-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    /* Borde redondeado para la imagen */
+}
+
+.project-card h3,
+.committee-card h3 {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.project-card p,
+.committee-card p {
+    font-family: 'Quicksand', sans-serif;
+    margin-bottom: 15px;
+}
+
+.profile-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: none;
+    /* Inicialmente oculto */
+    opacity: 0.8;
+    /* Añade algo de transparencia al fondo */
+    text-align: center;
+    font-weight: bold;
+    max-width: 80%;
+    /* Ajuste de ancho para una mejor visualización */
+}
+
+.image-container:hover .profile-overlay {
+    display: block;
+    /* Mostrar la superposición al pasar el mouse */
+}
+
+button.inscribirse-btn {
+    background-color: #792330;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button.inscribirse-btn:hover {
+    background-color: #591b23;
+    /* Color más oscuro al pasar el mouse */
+}
+
+button:disabled,
+button[disabled] {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+
+    #projects-container,
+    #committees-container {
+        grid-template-columns: 1fr 1fr;
+        /* Dos columnas para pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+
+    #projects-container,
+    #committees-container {
+        grid-template-columns: 1fr;
+        /* Una columna para pantallas muy pequeñas */
+    }
+
+    #div-initial-form,
+    form {
+        width: 100%;
+        /* Formulario ocupa todo el ancho en pantallas pequeñas */
+    }
+}

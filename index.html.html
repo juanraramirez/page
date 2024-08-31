@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripción de proyectos y comités 2024-2</title>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Inscripción de proyectos y comités 2024-2</h1>
+    </header>
+    <main>
+        <form name="form">
+            <div id="div-initial-form">
+                <h2>Ingrese sus datos</h2>
+                <label for="initial-name">Nombre:</label>
+                <input name="Nombre" type="text" id="initial-name" required>
+                <label for="initial-email">Correo Electrónico:</label>
+                <input name="Correo ANEIAP" type="email" id="initial-email" required>
+                <label for="team-member">¿Hacer parte de algún equipo de cargo o el ECI?:</label>
+                <select name="¿Está en un equipo de cargo o ECI?" id="team-member" required>
+                    <option value="">Seleccione una opción</option>
+                    <option value="Si">Sí</option>
+                    <option value="No">No</option>
+                </select>
+                <div id="team-options" class="hidden">
+                    <label for="team-role">¿En cuál?</label>
+                    <select name="¿Qué equipo?" id="team-role">
+                        <option value="Sin seleccionar">Sin seleccionar</option>
+                        <option value="Presidencia">Presidencia</option>
+                        <option value="ECI">ECI</option>
+                        <option value="Académico">Académico</option>
+                        <option value="Comunicaciones">Comunicaciones</option>
+                        <option value="Desarrollo">Desarrollo</option>
+                        <option value="Finanzas">Finanzas</option>
+                        <option value="Mercadeo">Mercadeo</option>
+                    </select>
+                </div>
+                <label for="saio-member">¿Haces parte de SAIO 2024?</label>
+                <select name="¿Está en SAIO?" id="saio-member" required>
+                    <option value="">Seleccione una opción</option>
+                    <option value="Si">Sí</option>
+                    <option value="No">No</option>
+                </select>
+                <div id="saio-options" class="hidden">
+                    <label for="saio-role">¿Cuál es tu participación en SAIO?</label>
+                    <select name="¿Comité o Staff?" id="saio-role">
+                        <option value="Sin Seleccionar">Sin Seleccionar</option>
+                        <option value="Comité">Comité</option>
+                        <option value="Staff">Staff</option>
+                    </select>
+                </div>
+                <button type="submit">Ingresar</button>
+            </div>
+            <div id="content" class="hidden">
+                <h2>Proyectos</h2>
+                <div id="projects-container" class="grid-container">
+                    <!-- Aquí se agregarán los proyectos dinámicamente -->
+                </div>
+                <h2>Comités</h2>
+                <div id="committees-container" class="grid-container">
+                    <!-- Aquí se agregarán los comités dinámicamente -->
+                </div>
+
+                <div id="registration-form" class="hidden">
+                    <h2>Inscríbete en un Proyecto o Comité</h2>
+                    <label for="project-select">Selecciona un Proyecto</label>
+                    <select name="Proyecto seleccionado" id="project-select" required>
+                        <!-- Opciones de proyectos y comités se agregarán dinámicamente -->
+                    </select>
+                    <label for="committees-select">Selecciona un Comité:</label>
+                    <select name="Comité seleccionado" id="committees-select" required>
+                        <!-- Opciones de proyectos y comités se agregarán dinámicamente -->
+                    </select>
+                </div>
+                <button onclick="enviarFormulario()">Inscribirse</button>
+
+
+            </div>
+        </form>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
